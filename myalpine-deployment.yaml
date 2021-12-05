@@ -18,9 +18,3 @@ spec:
       containers:
       - name: myalpine
         image: raj/myalpine-image:0.1
-  syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-    automated:
-      selfHeal: true
-      prune: true
