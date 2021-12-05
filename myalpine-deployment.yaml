@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - name: myalpine
-        image: raj/myalpine-image:0.1
+        image: alpine:3.14
