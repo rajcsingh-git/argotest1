@@ -3,16 +3,18 @@ kind: Deployment
 metadata:
   name: myalpine-deployment
   namespace: test-argo
+  labels:
+    apps: myalpine
 spec:
   selector:
     matchlabels:
       app: myalpine
-    replicas: 2
-    template:
-      metadata:
-        labels:
-          app: myalpine
-      spec:
-        containers:
-        - name: myalpine
-          image: raj/myalpine-image:0.1
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: myalpine
+    spec:
+      containers:
+      - name: myalpine
+        image: raj/myalpine-image:0.1
