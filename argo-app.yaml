@@ -20,7 +20,7 @@ spec:
   source:
     repoURL: https://github.com/rajcsingh-git/argotest1.git
     targetRevision: main
-    path: test
+#    path: test
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
