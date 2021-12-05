@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myalpine-deployment
+  name: myhttp-deployment
   namespace: test-argo
   labels:
-    apps: myalpine
+    app: myhttp
 spec:
   selector:
     matchLabels:
-      app: myalpine
-  replicas: 2
+      app: myhttp
+  replicas: 3
   template:
     metadata:
       labels:
-        app: myalpine
+        app: myhttp
     spec:
       containers:
-      - name: myalpine
-        image: alpine:3.14
+      - name: myhttp
+        image: httpd
