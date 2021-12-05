@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argocd-repo
+  namespace: argocd
+type: Opaque
+stringData:
+  password: Z2hwX25XeXVUb3hvQ1g0SDV5d3RQd2t4VHdRTTRPQ3dZdzBTQ0FtQg==
+  username: S2EjYW4vbW50R2l0
+  url: https://github.com/rajcsingh-git/argocd-app-config.git
+
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
